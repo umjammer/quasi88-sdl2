@@ -34,7 +34,7 @@ SDL2_VERSION	= 1
 #	ディレクトリが使用されます。
 #	 ~/ は、QUASI88の起動時にホームディレクトリ（$HOME）に展開されます。
 
-ROMDIR	= ~/quasi88/rom/
+ROMDIR	= ~/.config/quasi88/rom/
 
 
 # DISK用ディレクトリを設定します
@@ -44,7 +44,7 @@ ROMDIR	= ~/quasi88/rom/
 #	ディレクトリが使用されます。
 #	 ~/ は、QUASI88の起動時にホームディレクトリ（$HOME）に展開されます。
 
-DISKDIR	= ~/quasi88/disk/
+DISKDIR	= ~/.config/quasi88/disk/
 
 
 # TAPE用ディレクトリを設定します
@@ -53,7 +53,7 @@ DISKDIR	= ~/quasi88/disk/
 #	ディレクトリが使用されます。
 #	 ~/ は、QUASI88の起動時にホームディレクトリ（$HOME）に展開されます。
 
-TAPEDIR	= ~/quasi88/tape/
+TAPEDIR	= ~/.config/quasi88/tape/
 
 
 # (X11)
@@ -109,8 +109,8 @@ X11_HAVE_GETTIMEOFDAY = 1
 #	FreeBSD にて USB joystick が使用できます。
 #	( 環境によっては、コンパイルすらできないかもしれません )
 
-X11_JOYSTICK	= joy_nothing
-# X11_JOYSTICK	= joy_sdl
+# X11_JOYSTICK	= joy_nothing
+X11_JOYSTICK	= joy_sdl
 # X11_JOYSTICK	= joy_linux_usb
 # X11_JOYSTICK	= joy_bsd_usb
 
@@ -151,7 +151,7 @@ USE_SSS_CMD	= 1
 # PC-8801のキーボードバグをエミュレートしたい場合は、
 # 以下のコメントアウトを外して下さい。
 
-# USE_KEYBOARD_BUG	= 1
+USE_KEYBOARD_BUG	= 1
 
 
 
@@ -248,7 +248,7 @@ SOUND_SDL2		= 1
 # cisc氏作の、fmgen (FM Sound Generator) を組み込まない場合、以下の行を
 # コメントアウトして下さい。
 
-# USE_FMGEN	= 1
+USE_FMGEN	= 1
 
 
 # 注意！
@@ -277,11 +277,11 @@ SOUND_SDL2		= 1
 
 SDL_CONFIG	= sdl-config
 
-ifeq ($(ARCH),macosx)
-SDL2_CONFIG	= ./osx/sdl2-config-mac
-else
+#ifeq ($(ARCH),macosx)
+#SDL2_CONFIG	= ./osx/sdl2-config-mac
+#else
 SDL2_CONFIG	= sdl2-config
-endif
+#endif
 
 #######################################################################
 # GTKライブラリの設定
@@ -318,7 +318,7 @@ CFLAGS = -O2 -g
 # CFLAGS += -fsigned-char
 
 # 例えば gcc で最適化をしたい場合、以下のコメントアウトを外します。
-# CFLAGS += -fomit-frame-pointer -fstrength-reduce -funroll-loops -ffast-math
+CFLAGS += -fomit-frame-pointer -fstrength-reduce -funroll-loops -ffast-math
 
 
 
@@ -367,7 +367,7 @@ CXXLIBS	 = -lstdc++
 #	C++ コンパイラを使う場合、環境によっては $(CXX) とする必要が
 #	あるかもしれません。
 
-LD	= $(CC) -Wl,-s
+LD	= $(CC)
 # LD	= $(CXX) -Wl,-s
 
 
@@ -378,7 +378,7 @@ LD	= $(CC) -Wl,-s
 # インストール先ディレクトリの設定
 #
 
-BINDIR = /usr/local/bin
+BINDIR = $(HOME)/bin
 
 
 

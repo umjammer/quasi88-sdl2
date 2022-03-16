@@ -818,9 +818,9 @@ int	osd_file_config_init(void)
 
 	/* $(HOME)/.quasi88/以下のディレクトリを作成 */
 
-#define	HOME_QUASI88		"/.quasi88"
-#define	HOME_QUASI88_RC		"/.quasi88/rc"
-#define	HOME_QUASI88_STATE	"/.quasi88/state"
+#define	HOME_QUASI88		"/.config/quasi88"
+#define	HOME_QUASI88_RC		"/.config/quasi88/rc"
+#define	HOME_QUASI88_STATE	"/.config/quasi88/state"
 
 	s = malloc(strlen(home) + sizeof(HOME_QUASI88) + 1);
 	if (s) {
