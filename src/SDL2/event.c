@@ -98,12 +98,12 @@ static	const char *debug_sdlkeysym(int code); /* デバッグ用 */
  *	  windib  だと、カーソルキーとテンキーなど、たくさん。
  *	  directx なら、重複は無い ?
  *	○いくつかのキーで、 keysym が重複している
- *	  windib  だと、￥ と ]  (ともに ￥ になる)
+ *	  windib  だと、¥ と ]  (ともに ¥ になる)
  *	  directx なら、重複は無い ?
  *	○いくつかのキーで、キーシンボルが未定義
  *	  無変換、変換、カタカナひらがな が未定義
  *	  windib  だと、＼ が未定義
- *	  directx だと、＾￥＠：、半角/全角 が未定義
+ *	  directx だと、＾¥＠：、半角/全角 が未定義
  *	○いくつかのキーで、キーを離した時の検知が不安定(?)
  *	  windib  だと 半角/全角、カタカナひらがな、PrintScreen
  *	  directx だと ALT
